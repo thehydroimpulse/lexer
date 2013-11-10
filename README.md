@@ -29,7 +29,7 @@ Create some rules/definition:
 ```js
 var lexer = Lexer.init()
   .def('string', new RegExp("^\"[^\"]*\"|\'[^\']*\'$"))
-  .def('whitespace', /^[\t \n]$/, true)
+  .def('whitespace', /^[\t \n]$/, true) // Skip these tokens.
   .def('pipe', /^[\|]$/)
   .string('str |') // Input
   .start() // Operate on the input.
