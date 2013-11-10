@@ -137,11 +137,12 @@ Lexer.prototype.lookbehind = function(l, count) {
   if (count == undefined) count = 1;
   if (!l) l = -1;
   var token, lexeme, eof = false, bof = false;
+
   while (count-- > 0) {
     var pos = this.arrayPosition - l - 1;
     if (pos-- > 0) {
       token = this.tokens[pos];
-      lexeme = this.lexemes[pos];
+      //lexeme = this.lexemes[pos];
       eof = false;
       if (this.defs[token.type].skip) {
         this.lookbehind(l - 1);
