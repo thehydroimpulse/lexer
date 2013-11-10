@@ -4,12 +4,17 @@
 
 var Token = require('./lib/token');
 
-
 /**
  * Module Export
  */
 
 exports = module.exports = Lexer;
+
+/**
+ * Expose `Token`
+ */
+
+exports.Token = Token;
 
 /**
  * Lexer Function
